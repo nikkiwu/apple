@@ -1,0 +1,319 @@
+body{
+    margin:0;
+    padding:0;
+    font-size:100%;
+    line-height: 1.6;
+    height: 100%;
+
+}
+html{
+    height: 100%;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/*--nav---*/
+
+
+/*-- SPLIT SCREEN---*/
+
+
+#wrapper{
+    position: relative;
+    width: 100%;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer{
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+    overflow: hidden;
+}
+
+.layer .content-wrap{
+    position: absolute;
+    width: 100vw;
+    min-height: 55vw;
+}
+
+.layer .content-body{
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    transform: translateY(-50%);
+    color: black;
+    font-family: SF-Pro-Display-light;
+}
+
+
+.iphonefrontblk, .iphonefrontwht {
+    position: absolute;
+    width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.iphonelandscape{
+    position: absolute;
+    width: 24%;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.iphoneface{
+    position: absolute;
+    width: 24%;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+
+.layer h1{
+    font-size: 2em;
+    font-family: SF-Pro-Display-Semibold;
+}
+
+.bottom{
+    background: url("../image/iphoneWp.jpg") no-repeat center;
+    background-size: cover;
+    z-index: 1;
+}
+
+
+.bottom .content-body{
+    right: 5%;
+}
+
+.bottom h1{
+    color: black;
+}
+
+
+.top{
+    background: url("../image/iphonewp2.png") no-repeat center;
+    background-size: cover;
+    z-index: 2;
+    width: 50vw;
+}
+
+.top .content-body{
+    left: 5%;
+    color: #222222;
+}
+
+.handle{
+    position: absolute;
+    height: 100%;
+    display: block;
+    background: #52A8EA;
+    width: 5px;
+    top: 0;
+    left: 50%;
+    z-index: 3;
+}
+
+
+.skewed .handle{
+    top: 50%;
+    transform: rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin: top;
+}
+
+.skewed .top{
+    transform: skew(-30deg);
+    margin-left: -1000px;
+    width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap{
+    transform: skew(30deg);
+    margin-left: 1000px;
+}
+
+/*--mobile---*/
+.mobilehalf{
+    background:url("../image/mobileiphone2.jpeg") no-repeat center;
+    background-size: cover;
+    height: 100%;
+    display: none;
+    position: relative;
+}
+
+.writingleft{
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: SF-Pro-Text-Medium;
+}
+
+.writingright{
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-family: SF-Pro-Text-Medium;
+    color: white;
+}
+
+/*---X LOGO --*/
+
+.text-container{
+    background: #FFFFFF;
+    height: 100%;
+    position: relative;
+}
+
+.theX {
+    font-size:400px;
+    font-family: SF-Pro-Display-Semibold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    color: rgba(225,225,225, .1);
+    background: url("../image/iphoneWp.jpg") repeat-x bottom;
+    background-size: cover;
+    -webkit-background-clip:text;
+    animation: animate 4s linear infinite;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+@keyframes animate {
+    0% {
+        background-position: right 30px top 100px;
+    }
+    40% {
+        background-position: left 800px top 80px;
+    }
+}
+
+
+
+
+
+/*---title--*/
+
+
+.texttitle{
+    position: relative;
+    display: block;
+    padding:  60px 30px;
+    text-align: center;
+
+}
+.texttitle h1{
+
+    font-family: SF-Pro-Text-Bold;
+    font-size: 64px;
+    line-height: 1.0625;
+    font-weight: 600;
+    letter-spacing: -.009em;
+}
+
+
+
+
+.texttitle p{
+
+    font-family: SF-Pro-Text-Regular;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+li{
+    padding:  10px;
+    list-style-type: none;
+    display: inline-block;
+    font-family: SF-Pro-Text-Regular;
+    font-size: 27px;
+    color: #1072C6;
+}
+
+
+/*--FADING AOS--*/
+
+
+.texttitle img{
+    height: 500px;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+/*--MEDIA QUERY---*/
+
+@media (max-width:768px) {
+    body{
+        font-size: 75%;
+    }
+}
+
+
+@media  (max-width: 667px) {
+    #wrapper{
+    display: none;
+    }
+    .mobilehalf{
+        display: block;
+
+    }
+    li{
+        font-size: 15px;
+        text-align: center;
+    }
+    li i{
+        display: block;
+    }
+
+
+    .theX h1 {
+        font-size: 300px;
+    }
+
+    .texttitle h1{
+        font-size: 48px;
+        line-height: 1.08365;
+        font-weight: 600;
+        letter-spacing: -.003em;
+        text-align: left;
+    }
+
+    .texttitle p{
+        font-size: 24px;
+        line-height: 1.33349;
+        font-weight: 600;
+        letter-spacing: .009em;
+        float: left;
+        text-align: left;
+    }
+    .texttitle ul{
+        text-align: left;
+    }
+
+    .texttitle img{
+        height: 250px;
+        width: auto;
+    }
+
+}
+
+
+
