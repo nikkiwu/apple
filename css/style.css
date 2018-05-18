@@ -8,6 +8,7 @@ body{
 }
 html{
     height: 100%;
+    background: #FAFAFA;
 }
 
 
@@ -167,9 +168,10 @@ html{
 /*---X LOGO --*/
 
 .text-container{
-    background: #FFFFFF;
+    background: #FAFAFA;
     height: 100%;
     position: relative;
+
 }
 
 .theX {
@@ -192,10 +194,10 @@ html{
 
 @keyframes animate {
     0% {
-        background-position: right 30px top 100px;
+        background-position: right 10px top 100px;
     }
-    40% {
-        background-position: left 800px top 80px;
+    100% {
+        background-position: left 300px top 80px;
     }
 }
 
@@ -230,6 +232,7 @@ html{
     font-family: SF-Pro-Text-Regular;
     font-size: 27px;
     font-weight: bold;
+    word-wrap: break-spaces;
 }
 
 li{
@@ -239,23 +242,123 @@ li{
     font-family: SF-Pro-Text-Regular;
     font-size: 27px;
     color: #1072C6;
+
+}
+
+.texttitle a{
+    text-decoration: none;
 }
 
 
+
+
+
+/*---Display page ---*/
+
+.screenpagetitle{
+    position: relative;
+    display: block;
+    padding:  60px 30px;
+    text-align: center;
+    font-family: SF-Pro-Text-Bold;
+    background: #FAFAFA;
+}
+
+
+ .itsallscreen{
+     font-size: 4em;
+     line-height: 0;
+ }
+.cornerimg{
+    background: url("../image/design_hero_large_2x.jpg") no-repeat ;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 60vh;
+    width: 98.8vw;
+    background-position: bottom right;
+
+
+
+
+}
+
+
+/*---retinadisplay---*/
+
+
+.retinatext {
+    position: relative;
+    font-family: SF-Pro-Text-Bold;
+    line-height: 1.21053;
+    font-weight: 600;
+    letter-spacing: .012em;
+    height: 100%;
+
+}
+.retinatext h1 {
+    position: absolute;
+    font-size: 19px;
+    top: 12%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+}
+
+.retinatextp {
+    position: absolute;
+    font-family: SF-Pro-Text-Medium;
+    text-align: center;
+    font-size: 32px;
+    width: 50%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.iphone1 img{
+    position: absolute;
+    width: auto;
+    height: 100vh;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+
+
+}
 /*--FADING AOS--*/
 
 
 .texttitle img{
-    height: 500px;
+
+    height: 200px;
     width: auto;
 }
 
 
 
 
+/*---footer---*/
 
+footer{
+    padding: 20px;
+    font-family: SF-Pro-Text-Regular;
+    width: 20%;
+}
 
+footer a{
+    text-decoration: none;
+}
 
+footer i{
+    font-size: 50px;
+    color: black;
+}
+
+footer i:hover{
+    color: #1072C6;
+    transition: 1s;
+}
 
 
 /*--MEDIA QUERY---*/
@@ -309,8 +412,44 @@ li{
     }
 
     .texttitle img{
-        height: 250px;
+        height: 350px;
         width: auto;
+    }
+    .screenpagetitle{
+        font-size: 1.2em;
+        line-height: .5;
+        text-align: left;
+    }
+    .cornerimg{
+        background: url("https://images.apple.com/v/iphone-x/e/images/overview/primary/design_hero_small_2x.jpg") no-repeat;
+        background-size: cover;
+        height: 50vh;
+        width: 88.4vw;
+        margin-left: 42px;
+    }
+
+    .itsallscreen{
+        font-size: 2.5em;
+    }
+    .retinatexth1{
+        position: absolute;
+        top: 2%;
+        width: 60%;
+        transform: translate(50%, 0%);
+        padding-top: 30px;
+
+    }
+
+    .retinatextp{
+        font-size: 20px;
+        width: 80%;
+        text-align: left;
+    }
+
+    .iphone1 img{
+        height: 50%;
+        width: auto;
+        top: 65%;
     }
 
 }
