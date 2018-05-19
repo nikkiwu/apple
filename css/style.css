@@ -229,7 +229,7 @@ html{
 
 .texttitle p{
 
-    font-family: SF-Pro-Text-Regular;
+    font-family: SF-Pro-Display-light;
     font-size: 27px;
     font-weight: bold;
     word-wrap: break-spaces;
@@ -450,6 +450,10 @@ footer i:hover{
         height: 50%;
         width: auto;
         top: 65%;
+    }
+
+    footer{
+        width: 100%;
     }
 
 }
